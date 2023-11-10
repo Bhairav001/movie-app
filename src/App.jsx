@@ -15,7 +15,7 @@ import Footer from "./components/footer/Footer"
 function App(){
 
   const dispatch = useDispatch();
-  
+
   const {url} = useSelector((store)=>store.home);
 
   console.log("url",url);
@@ -47,7 +47,7 @@ function App(){
           <Route path="/explore/:mediaType" element={<Explore/>}/>
           <Route path="*" element={<PageNotFound/>}/>
        </Routes>
-       {/* <Footer/> */}
+       <Footer/>
     </BrowserRouter>
   )
 }
