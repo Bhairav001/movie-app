@@ -14,9 +14,12 @@ import Footer from "./components/footer/Footer"
 
 function App(){
 
-  const dispatch = useDispatch()
-  const {url} = useSelector((store)=>store.home)
-  console.log("url",url)
+  const dispatch = useDispatch();
+  
+  const {url} = useSelector((store)=>store.home);
+
+  console.log("url",url);
+
   useEffect(()=>{
     fetchApiConfig()
   },[])
