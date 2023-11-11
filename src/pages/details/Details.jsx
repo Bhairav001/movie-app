@@ -2,7 +2,7 @@ import React from 'react'
 import "./style.scss"
 import useFetch from '../../hooks/useFetch'
 import { useParams } from 'react-router-dom'
-import DetailsBanner from './detailsBanner/DetailBanner'
+import DetailsBanner from './detailsBanner/DetailsBanner'
 import { useSelector } from 'react-redux'
 const Details = () => {
 
