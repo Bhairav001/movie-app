@@ -34,6 +34,7 @@ const fetchNextPageData = ()=>{
   })
 }
   useEffect(()=>{
+    setPageNum(1);
     fetchInitialData();
   },[query])
 
@@ -42,10 +43,10 @@ const fetchNextPageData = ()=>{
         {loading && <Spinner initial={true}/>}
         {!loading && (
           <ContentWrapper>
-              {data?.results.length> 0 ? (
+              {data?.results?.length> 0 ? (
                     <>
                       <div className="pageTitle">
-                          {`Search ${data.total_results > 1 ?"results":"result"} of '${query}'`}
+                          {`Search ${data?.total_results > 1 ?"results":"result"} of '${query}'`}
                       </div>
                       <InfiniteScroll
                         className='content'
