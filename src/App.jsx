@@ -10,6 +10,8 @@ import Explore from "./pages/explore/Explore"
 import PageNotFound from "./pages/404/PageNotFound"
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
+import Signup from "./pages/signup/Signup"
+import Login from "./pages/login/Login"
 
 
 function App(){
@@ -67,6 +69,8 @@ function App(){
           <Route path="/:mediaType/:id" element={<Details/>}/>
           <Route path="/search/:query" element={<SearchResult/>}/>
           <Route path="/explore/:mediaType" element={<Explore/>}/>
+          <Route path="/signup" element={<Signup/>}/>
+          <Route path="/login" element={<Login/>}/>
           <Route path="*" element={<PageNotFound/>}/>
        </Routes>
        <Footer/>
